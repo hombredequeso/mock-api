@@ -1,0 +1,11 @@
+
+[{
+  "method": "get",
+  "path": "/order/1",
+  "responses": [
+    {
+      "status": 200,
+      "body": { "order": 1 }
+    }
+  ]
+}]
