@@ -1,11 +1,17 @@
 const express = require("express");
-const app = express();
-app.use(express.json());
+const responseTime = require('response-time');
 
 const port = process.env.PORT || 3000;
-
 const endpointFileName = process.argv[2] || "./built-in-endpoint";
 const endpoints = require(endpointFileName);
+
+const app = express();
+
+app.use(express.json());
+app.use(responseTime(function (req, res, time) {
+  console.log(`Response time: ${time}`);
+}))
+
 
 endpoints.forEach((endpoint) => {
   if (endpoint.response) {
