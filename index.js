@@ -1,5 +1,7 @@
 const express = require("express");
 const app = express();
+app.use(express.json());
+
 const port = process.env.PORT || 3000;
 
 const endpointFileName = process.argv[2] || "./built-in-endpoint";
@@ -32,7 +34,7 @@ endpoints.forEach((endpoint) => {
     );
 
     const responseDelay = thisResponse.response?.delay | 0;
-    console.log({ endpoint, thisResponse, responseDelay });
+    // console.log({ requestBody: req.body, endpoint, thisResponse, responseDelay });
 
     setTimeout(() => {
       setResponse(res, thisResponse.response);

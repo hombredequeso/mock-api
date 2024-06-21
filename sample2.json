@@ -19,4 +19,28 @@
       "ratio": 1
     }
   ]
-}]
+},
+{
+  "method": "get",
+  "path": "/order/1",
+  "responses": [
+    {
+      "status": 200,
+      "body": { "order": 1 }
+    }
+  ]
+},
+
+{
+  "method": "get",
+  "path": "/order/2",
+  "responses": [
+    {
+      "status": 200,
+      "body": { "order": 1 },
+      "delay": 100
+    }
+  ]
+}
+
+]
