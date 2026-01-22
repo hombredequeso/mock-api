@@ -4,8 +4,17 @@ const endpoint1 = {
   responses: [
     {
       status: 200,
-      body: { order: 1 },
+      ratio: 1,
+      delay:5000,
+      body: { id: "1" },
     },
+    // {
+    //   status: 404
+    // },
+    // {
+    //   ratio: 4,
+    //   status: 500,
+    // },
   ],
 };
 

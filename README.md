@@ -13,7 +13,7 @@ To run using the sample built-in-endpoint.js configuration:
 yarn
 node index.js
 ```
-The api will be hosted at localhost:4000, or as specified by the PORT environment variable:
+The api will be hosted at localhost:3000, or as specified by the PORT environment variable:
 
 ```
 export PORT=4000&&node index.js
